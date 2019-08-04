@@ -1,2 +1,2 @@
-# crono_gql
+# crono
 Proyecto de horarios
