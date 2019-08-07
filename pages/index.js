@@ -1,21 +1,21 @@
 import { useQuery } from "@apollo/react-hooks";
 import withData from "../graphql/config/apollo";
 
-import BOOKS from './../graphql/queries/books';
+import TEST from './../graphql/queries/test';
 
-function Home(props) {
-    const query = useQuery(BOOKS);
+function Home() {
+    const query = useQuery(TEST);
 
     if (query.loading) return "Loading";
     return (
         <div>
-            Aqui debe aparecer el nombre de un libro: {query.data.books[1].title}
+            Verifica que aparezca un texto despues de esto: {query.data._empty}
             <br />
             <button className="ui button">
-                Follow
+                Boton para verificar el funcionamiento de Semantic UI
             </button>
         </div>
     );
 }
 
-export default withData(props =>  <Home />);
+export default withData( props => <Home />);
