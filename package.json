@@ -1,10 +1,10 @@
 {
   "name": "crono",
-  "version": "1.0.0", 
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "next", 
+    "dev": "next",
     "build": "next build",
     "start": "next start"
   },
@@ -29,4 +29,3 @@
     "not dead"
   ]
 }
- 
