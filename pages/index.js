@@ -1,15 +1,15 @@
 import { useQuery } from "@apollo/react-hooks";
 import withData from "../graphql/config/apollo";
 
-import BOOKS from './../graphql/queries/books';
+import EMPTY from '../graphql/queries/empty';
 
 function Home(props) {
-    const query = useQuery(BOOKS);
+    const query = useQuery(EMPTY);
 
     if (query.loading) return "Loading";
     return (
         <div>
-            Aqui debe aparecer el nombre de un libro: {query.data.books[1].title}
+            Aqui debe aparecer algo: {query.data._empty}
             <br />
             <button className="ui button">
                 Follow

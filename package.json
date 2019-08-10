@@ -19,8 +19,7 @@
     "next-apollo": "^3.0.3",
     "react": "^16.8.6",
     "react-apollo": "^2.5.8",
-    "react-dom": "^16.8.6",
-    "semantic-ui": "^2.4.2"
+    "react-dom": "^16.8.6"
   },
   "browserslist": [
     "last 1 version",
