@@ -12,10 +12,10 @@ function Home(props) {
             Aqui debe aparecer algo: {query.data._empty}
             <br />
             <button className="ui button">
-                Follow
+                Boton para verificar el funcionamiento de Semantic UI
             </button>
         </div>
     );
 }
 
-export default withData(props =>  <Home />);
+export default withData( props => <Home />);

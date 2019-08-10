@@ -17,9 +17,9 @@ class MyApp extends App {
 
     return (
       <Container>
-        Este es un header
-        <Component {...pageProps} />
-        Este es un footer
+          Este es un header
+          <Component {...pageProps} />
+          Este es un footer
       </Container>
     );
   }
