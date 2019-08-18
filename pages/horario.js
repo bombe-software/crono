@@ -1,28 +1,17 @@
 import { useState } from 'react';
+import { Input, Form, ButtonSubmit } from './../components/form';
 
-import Input from './../components/form/input';
-import Form from './../components/form/form';
-
-export default (props) => {
-    const [values, setValues] = useState([]);
-    const [ready, setReady] = useState(false);
-    
-    
-    function handleSubmit(){
-        if(ready){
-            console.log(values);
-        }
+export default (props) => {   
+    function handleSubmit(values){
+        console.log(values);
     }
-    
     return (
         <div>
-            <Form setValues={setValues} setReady={setReady}  values={values}>
+            <Form onSubmit={handleSubmit}>
                 <Input idx={'Nombre'}/>
                 <Input idx={'Nombre2'}/>
+                <ButtonSubmit />
             </Form>
-            <button className="ui primary button" onClick={handleSubmit}>
-                Save
-            </button>
         </div>
     );
 }
