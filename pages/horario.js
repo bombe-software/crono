@@ -5,19 +5,22 @@ import Form from './../components/form/form';
 
 export default (props) => {
     const [values, setValues] = useState([]);
+    const [ready, setReady] = useState(false);
     
-    function handelSubmit(){
-        console.log(values);
+    
+    function handleSubmit(){
+        if(ready){
+            console.log(values);
+        }
     }
     
     return (
         <div>
-            {console.log(values)}
-            <Form setValues={setValues} values={values}>
+            <Form setValues={setValues} setReady={setReady}  values={values}>
                 <Input idx={'Nombre'}/>
                 <Input idx={'Nombre2'}/>
             </Form>
-            <button className="ui primary button" onClick={handelSubmit}>
+            <button className="ui primary button" onClick={handleSubmit}>
                 Save
             </button>
         </div>
