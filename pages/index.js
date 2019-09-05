@@ -1,10 +1,9 @@
 import { useQuery } from "@apollo/react-hooks";
-import withData from "../graphql/config/apollo";
-
+import client from "../graphql/config/client";
 import EMPTY from '../graphql/queries/empty';
 
 function Home(props) {
-    const query = useQuery(EMPTY);
+    const query = useQuery(EMPTY, {client});
 
     if (query.loading) return "Loading";
     return (
@@ -18,4 +17,4 @@ function Home(props) {
     );
 }
 
-export default withData( props => <Home />);
+export default Home;
