@@ -1,5 +1,5 @@
 import Input from './input';
 import Form from './form';
-import ButtonSubmit from './button_submit';
+import Submit from './submit';
 
-export { Input, Form, ButtonSubmit };
+export { Input, Form, Submit };
