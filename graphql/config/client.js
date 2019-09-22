@@ -1,4 +1,3 @@
-import { ApolloProvider } from 'react-apollo';
 import { ApolloClient } from 'apollo-boost';
 import { createHttpLink } from 'apollo-link-http';
 import fetch from 'node-fetch';

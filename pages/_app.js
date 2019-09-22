@@ -1,5 +1,9 @@
 import React from 'react';
 import App, { Container } from 'next/app';
+
+import Header from './../components/layout/header';
+import Footer from './../components/layout/footer';
+
 class MyApp extends App {
   static async getInitialProps({ Component, ctx }) {
     let pageProps = {};
@@ -17,12 +21,15 @@ class MyApp extends App {
 
     return (
       <Container>
-            Este es un header
-            <Component {...pageProps} />
-            Este es un footer
+        <Header />
+        <div class="ui main text container">
+          <Component {...pageProps} />
+        </div>
+        <Footer />
       </Container>
     );
   }
 }
 
 export default MyApp;
+
