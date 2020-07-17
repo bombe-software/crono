@@ -1,14 +1,7 @@
-import { useState } from 'react';
+import useLogic  from './useLogic';
 
 export default (props) => {
-    const [value, setValue] = useState('');
-    const [touched, setTouched] = useState(false);
-
-    const validate = props.validate || (value => (value == '') ? 'Es un campo obligatorio' : '' );
-    
-    props.add_value({idx: props.idx, value});
-    props.add_error({idx: props.idx, value: validate(value) === ''});
-
+    const [value, setValue, touched, setTouched, validate] = useLogic(props);
     
     return (
         <div className={`ui input ${touched && validate(value) !== '' ? 'error' : '' }`}>
