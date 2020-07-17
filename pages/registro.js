@@ -1,12 +1,8 @@
-import React from 'react';
-
-const Registro = () => {
+export default (props) => {
     return (
         <div>
             Registro
         </div>
+    )
 
-    );
 }
-
-export default Registro;
