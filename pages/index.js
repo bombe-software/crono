@@ -5,7 +5,7 @@ import EMPTY from '../graphql/queries/empty';
 function Home(props) {
     const query = useQuery(EMPTY, {client});
 
-    if (query.loading) return "Loading";
+    if (query.loading) return <div>Loading</div>;
     return (
         <div>
             Aqui debe aparecer algo: {query.data._empty}

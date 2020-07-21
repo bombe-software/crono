@@ -1,7 +1,8 @@
-export default (props) => { 
-    return(
-       <div>
-           Registro
-       </div> 
+export default (props) => {
+    return (
+        <div>
+            Registro
+        </div>
     )
+
 }

@@ -1,4 +1,4 @@
-export default (props) => { 
+export default (props) => {
     return (
     <div className="ui vertical footer segment">
         <div className="ui section divider"></div>
