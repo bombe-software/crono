@@ -15,7 +15,7 @@
     "apollo-boost": "^0.4.3",
     "graphql": "^14.4.2",
     "graphql-tag": "^2.10.1",
-    "next": "^9.0.3",
+    "next": "^9.4.4",
     "next-apollo": "^3.0.3",
     "react": "^16.8.6",
     "react-apollo": "^2.5.8",

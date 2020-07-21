@@ -14,6 +14,7 @@ class MyDocument extends Document {
                         href="/static/semantic/dist/semantic.min.css"
                         rel="stylesheet"
                     />
+                    <link rel="icon" href="./static/img/logoCronos.ico"></link>
                 </Head>
                 <body>
                     <Main />

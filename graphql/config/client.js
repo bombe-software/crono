@@ -4,7 +4,7 @@ import fetch from 'node-fetch';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 
 const link = createHttpLink({
-    uri: "http://localhost:4000/",
+    uri: "http://localhost:4000/gql",
     fetch
 });
 

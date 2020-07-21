@@ -1,5 +1,5 @@
 import React from 'react';
-import App, { Container } from 'next/app';
+import App from 'next/app';
 
 import Header from './../components/layout/header';
 import Footer from './../components/layout/footer';
@@ -20,13 +20,13 @@ class MyApp extends App {
 
 
     return (
-      <Container>
+      <div>
         <Header />
-        <div class="ui main text container">
+        <div className="ui main text container">
           <Component {...pageProps} />
         </div>
         <Footer />
-      </Container>
+      </div>
     );
   }
 }

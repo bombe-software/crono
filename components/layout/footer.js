@@ -1,48 +1,48 @@
 export default (props) => { 
     return (
-    <div class="ui vertical footer segment">
-        <div class="ui section divider"></div>
-        <div class="ui center aligned container">
-            <div class="ui stackable divided grid">
-                <div class="three wide column">
-                    <h4 class="ui header">Group 1</h4>
-                <div class="ui link list">
-                <a href="#" class="item">Link One</a>
-                <a href="#" class="item">Link Two</a>
-                <a href="#" class="item">Link Three</a>
-                <a href="#" class="item">Link Four</a>
+    <div className="ui vertical footer segment">
+        <div className="ui section divider"></div>
+        <div className="ui center aligned container">
+            <div className="ui stackable divided grid">
+                <div className="three wide column">
+                    <h4 className="ui header">Group 1</h4>
+                <div className="ui link list">
+                <a href="#" className="item">Link One</a>
+                <a href="#" className="item">Link Two</a>
+                <a href="#" className="item">Link Three</a>
+                <a href="#" className="item">Link Four</a>
             </div>
         </div>
-        <div class="three wide column">
-          <h4 class="ui header">Group 2</h4>
-          <div class="ui link list">
-            <a href="#" class="item">Link One</a>
-            <a href="#" class="item">Link Two</a>
-            <a href="#" class="item">Link Three</a>
-            <a href="#" class="item">Link Four</a>
+        <div className="three wide column">
+          <h4 className="ui header">Group 2</h4>
+          <div className="ui link list">
+            <a href="#" className="item">Link One</a>
+            <a href="#" className="item">Link Two</a>
+            <a href="#" className="item">Link Three</a>
+            <a href="#" className="item">Link Four</a>
           </div>
         </div>
-        <div class="three wide column">
-          <h4 class="ui header">Group 3</h4>
-          <div class="ui link list">
-            <a href="#" class="item">Link One</a>
-            <a href="#" class="item">Link Two</a>
-            <a href="#" class="item">Link Three</a>
-            <a href="#" class="item">Link Four</a>
+        <div className="three wide column">
+          <h4 className="ui header">Group 3</h4>
+          <div className="ui link list">
+            <a href="#" className="item">Link One</a>
+            <a href="#" className="item">Link Two</a>
+            <a href="#" className="item">Link Three</a>
+            <a href="#" className="item">Link Four</a>
           </div>
         </div>
-        <div class="seven wide column">
-          <h4 class="ui header">Un producto de: </h4>
-          <img src="/static/img/bombe-text-logo.png" class="ui centered small image" />
+        <div className="seven wide column">
+          <h4 className="ui header">Un producto de: </h4>
+          <img src="/static/img/bombe-text-logo.png" className="ui centered small image" />
           <p>Make it simple, make it great</p>
         </div>
       </div>
-      <div class="ui section divider"></div>
-        <div class="ui horizontal small divided link list">
-                <a class="item" href="#">Site Map</a>
-                <a class="item" href="#">Contact Us</a>
-                <a class="item" href="#">Terms and Conditions</a>
-                <a class="item" href="#">Privacy Policy</a>
+      <div className="ui section divider"></div>
+        <div className="ui horizontal small divided link list">
+                <a className="item" href="#">Site Map</a>
+                <a className="item" href="#">Contact Us</a>
+                <a className="item" href="#">Terms and Conditions</a>
+                <a className="item" href="#">Privacy Policy</a>
             </div>
         </div>
     </div>
