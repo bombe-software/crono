@@ -8,11 +8,7 @@ function Home(props) {
     if (query.loading) return <div>Loading</div>;
     return (
         <div>
-            Aqui debe aparecer algo: {query.data._empty}
-            <br />
-            <button className="ui button">
-                Boton para verificar el funcionamiento de Semantic UI
-            </button>
+           Some
         </div>
     );
 }

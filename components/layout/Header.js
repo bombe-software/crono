@@ -2,33 +2,30 @@ import React from 'react';
 
 const Header = () => {
     return (
-        <div style={{position: "relative"}} className="ui fixed inverted menu">
-            <div className="ui container">
-                <a href="#" className="header item">
-                    <img className="logo" src="assets/images/logo.png" />
-                    Project Name
-                </a>
-                <a href="#" className="item">Home</a>
-                <div className="ui simple dropdown item">
-                    Dropdown <i className="dropdown icon"></i>
-                    <div className="menu">
-                        <a className="item" href="#">Link Item</a>
-                        <a className="item" href="#">Link Item</a>
-                        <div className="divider"></div>
-                        <div className="header">Header Item</div>
-                        <div className="item">
-                            <i className="dropdown icon"></i>
-                            Sub Menu
-                            <div className="menu">
-                                <a className="item" href="#">Link Item</a>
-                                <a className="item" href="#">Link Item</a>
-                            </div>
+        <div>
+            <div className="ui segment top fixed menu">
+                <div className="item">
+                    <h4 className="ui header">
+                        <img className="ui image" src="/images/logoCronos.svg" />
+                        <div className="content">
+                            Cronos
                         </div>
-                        <a className="item" href="#">Link Item</a>
-                    </div>
+                    </h4>
+                </div>
+                <div className="ui secondary right menu">
+                    <a className="item active">Home</a>
+                    <a className="item">Messages</a>
+                    <a className="item"> Friends</a>
                 </div>
             </div>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
         </div>
+
     );
 }
 
