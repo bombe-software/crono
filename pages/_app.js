@@ -1,8 +1,8 @@
 import React from 'react';
 import App from 'next/app';
 
-import Header from './../components/layout/header';
-import Footer from './../components/layout/footer';
+import Header from './../components/layout/Header';
+import Footer from './../components/layout/Footer';
 
 import "./index.css";
 
@@ -24,7 +24,7 @@ class MyApp extends App {
     return (
       <div>
         <Header />
-        <div className="ui main text">
+        <div className="ui text container">
           <Component {...pageProps} />
         </div>
         <Footer />

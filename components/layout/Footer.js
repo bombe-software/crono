@@ -38,7 +38,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="ui inverted section divider"></div>
-            <img src="assets/images/logo.png" className="ui centered mini image" />
+            <img src="/images/logoBombe.png" className="ui centered mini image" />
             <div className="ui horizontal inverted small divided link list">
                 <a className="item" href="#">Site Map</a>
                 <a className="item" href="#">Contact Us</a>

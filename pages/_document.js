@@ -11,10 +11,10 @@ class MyDocument extends Document {
             <Html>
                 <Head >
                     <link
-                        href="/static/semantic/dist/semantic.min.css"
+                        href="/semantic/dist/semantic.min.css"
                         rel="stylesheet"
                     />
-                    <link rel="icon" href="./static/img/logoCronos.ico"></link>
+                    <link rel="icon" href="/images/logoCronos.ico"></link>
                 </Head>
                 <body>
                     <Main />
