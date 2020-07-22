@@ -4,6 +4,8 @@ import App from 'next/app';
 import Header from './../components/layout/Header';
 import Footer from './../components/layout/Footer';
 
+import "./index.css";
+
 class MyApp extends App {
   static async getInitialProps({ Component, ctx }) {
     let pageProps = {};
