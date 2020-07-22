@@ -1,14 +1,13 @@
-import { useQuery } from "@apollo/react-hooks";
-import client from "../graphql/config/client";
+import { useQuery } from '@apollo/client';
 import EMPTY from '../graphql/queries/empty';
 
 function Home(props) {
-    const query = useQuery(EMPTY, {client});
+    const { loading, error, data } = useQuery(EMPTY);
 
-    if (query.loading) return <div>Loading</div>;
+    if(loading) return <div>Loading...</div>
     return (
         <div>
-           Some
+           Debe aparecer algo: {data._empty}
         </div>
     );
 }
