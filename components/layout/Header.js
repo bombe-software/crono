@@ -3,7 +3,7 @@ import React from 'react';
 const Header = () => {
     return (
         <div>
-            <div className="ui segment top fixed menu">
+            <div className="ui segment menu">
                 <div>
                     <h3 className="ui header">
                         <img className="ui image" src="/images/logoCronos.svg" width="100" />
@@ -18,10 +18,6 @@ const Header = () => {
                     <a className="item"> Amigos</a>
                 </div>
             </div>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
         </div>
 
     );
