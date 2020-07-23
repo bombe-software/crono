@@ -3,27 +3,21 @@ import React from 'react';
 const Header = () => {
     return (
         <div>
-            <div className="ui segment top fixed menu">
-                <div className="item">
-                    <h4 className="ui header">
-                        <img className="ui image" src="/images/logoCronos.svg" />
+            <div className="ui segment menu">
+                <div>
+                    <h3 className="ui header">
+                        <img className="ui image" src="/images/logoCronos.svg" width="100" />
                         <div className="content">
                             Cronos
                         </div>
-                    </h4>
+                    </h3>
                 </div>
                 <div className="ui secondary right menu">
-                    <a className="item active">Home</a>
-                    <a className="item">Messages</a>
-                    <a className="item"> Friends</a>
+                    <a className="item active">Horario</a>
+                    <a className="item">Agenda</a>
+                    <a className="item"> Amigos</a>
                 </div>
             </div>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
         </div>
 
     );

@@ -19,13 +19,11 @@ class MyApp extends App {
 
   render() {
     const { Component, pageProps } = this.props;
-
-
     return (
       <div>
         <Header />
         <div className="ui text container">
-          <Component {...pageProps} />
+          <Component suppressHydrationWarning {...pageProps}   />
         </div>
         <Footer />
       </div>
