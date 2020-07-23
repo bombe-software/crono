@@ -1,14 +1,12 @@
 import { Fragment } from "react"
 import { useForm } from 'react-hook-form';
-import Link from 'next/link'
+import Link from 'next/link';
 
 export default (props) => {
     const { handleSubmit, register, errors } = useForm();
-
     const onSubmit = (values) => {
         console.log(values);
     }
-
     return (
         <Fragment>
             <br />

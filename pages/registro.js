@@ -3,11 +3,9 @@ import { useForm } from 'react-hook-form';
 
 export default (props) => {
     const { handleSubmit, register, errors } = useForm();
-
     const onSubmit = (values) => {
         console.log(values);
     }
-
     return (
         <Fragment>
             <div className="column padding-reset">
@@ -126,5 +124,4 @@ export default (props) => {
             </div>
         </Fragment>
     )
-
 }

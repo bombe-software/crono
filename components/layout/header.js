@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 const Header = () => {
     return (
-        <div >
-            <div className="ui fixed segment menu" >
+        <Fragment>
+            <div style={{position: "relative"}} className="ui fixed segment menu" >
                 <div className="">   </div>
                 <div>
                     <h3 className="ui header">
@@ -19,7 +19,7 @@ const Header = () => {
                     <a className="item"> Amigos</a>
                 </div>
             </div>
-        </div>
+        </Fragment>
 
     );
 }

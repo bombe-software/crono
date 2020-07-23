@@ -5,7 +5,6 @@ const Footer = () => {
         <div className="ui vertical footer segment">
             <div className="ui section divider"></div>
             <div className="ui center aligned container">
-            
                 <div className="ui stackable divided grid">
                     <div className="three wide column">
                         <h4 className="ui header">Group 1</h4>
