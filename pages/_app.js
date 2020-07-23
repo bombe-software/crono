@@ -28,7 +28,7 @@ class MyApp extends App {
     return (
       <div>
         <Header />
-        <div className="ui text container">
+        <div className="ui text">
           <ApolloProvider client={client}>
             <Component {...pageProps} />
           </ApolloProvider>

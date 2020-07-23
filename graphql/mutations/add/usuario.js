@@ -7,12 +7,12 @@ mutation add_usuario($nombre: String!,
   $nombreUsuario:String!, 
   $correo: String!,
 	$contrasena: String!){
-  add_usuario(nombre: $nombre, 
-    									apellidoMaterno: $apellidoMaterno, 
-    									apellidoPaterno: $apellidoPaterno, 
-    									nombreUsuario: $nombreUsuario, 
-    									correo: $correo,
-											contrasena: $contrasena){
+  	add_usuario(nombre: $nombre, 
+	apellidoMaterno: $apellidoMaterno, 
+	apellidoPaterno: $apellidoPaterno, 
+	nombreUsuario: $nombreUsuario, 
+	correo: $correo,
+		contrasena: $contrasena){
   	id
   }
 }
