@@ -2,6 +2,7 @@ import React from 'react';
 import { ApolloProvider } from '@apollo/client';
 import App from 'next/app';
 
+import './index.css';
 import Header from './../components/layout/Header';
 import Footer from './../components/layout/Footer';
 
@@ -28,7 +29,7 @@ class MyApp extends App {
     return (
       <div>
         <Header />
-        <div className="ui text container">
+        <div>
           <ApolloProvider client={client}>
             <Component {...pageProps} />
           </ApolloProvider>

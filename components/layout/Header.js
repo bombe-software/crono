@@ -2,8 +2,9 @@ import React from 'react';
 
 const Header = () => {
     return (
-        <div>
-            <div className="ui segment menu">
+        <div >
+            <div className="ui fixed segment menu" >
+                <div className="">   </div>
                 <div>
                     <h3 className="ui header">
                         <img className="ui image" src="/images/logoCronos.svg" width="100" />
