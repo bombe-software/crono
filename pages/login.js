@@ -1,12 +1,30 @@
 import { Fragment } from "react"
 import { useForm } from 'react-hook-form';
+import { useMutation } from "@apollo/react-hooks";
+import { FacebookLoginButton } from "react-social-login-buttons";
+
+import login from './../graphql/mutations/login/login';
 import Link from 'next/link';
 
 export default (props) => {
     const { handleSubmit, register, errors } = useForm();
-    const onSubmit = (values) => {
-        console.log(values);
+    const [loginMutation] = useMutation(login);
+    const onSubmit = async (values) => {
+        await loginMutation({
+            variables: {
+                correo: values.correo,
+                contrasena: values.password,
+            },
+            optimisticResponse: true,
+        }).then((response) => {
+            console.log(response);
+        })
     }
+
+    const loginFacebook = ()=>{
+        window.location.href = "http://localhost:4000/auth/facebook"
+    }
+
     return (
         <Fragment>
             <br />
@@ -24,11 +42,11 @@ export default (props) => {
                                     <i className="user icon"></i>
                                     <input ref={register({
                                         required: true,
-                                    })} type="text" name="email" placeholder="Correo electrónico" />
+                                    })} type="text" name="correo" placeholder="Correo electrónico" />
                                 </div>
                             </div>
                             {
-                                errors.email && errors.email.type === "required" &&
+                                errors.correo && errors.correo.type === "required" &&
                                 <h4 className="ui red header">Ingrese su correo</h4>
                             }
                             <div className="field">
@@ -45,6 +63,7 @@ export default (props) => {
                             </div>
 
                             <button className="ui fluid large blue submit button">Iniciar sesión</button>
+                            <FacebookLoginButton  onClick={() => loginFacebook()} />
 
                         </div>
                         <div className="ui error message"></div>
@@ -53,7 +72,10 @@ export default (props) => {
                         ¿No tienes una cuenta?   <Link href="/registro"><a href="#">Registrarse</a></Link>
                     </div>
                 </div>
+
+
             </div>
+
         </Fragment>
     )
 

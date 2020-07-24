@@ -1,10 +1,27 @@
 import { Fragment } from "react"
 import { useForm } from 'react-hook-form';
+import { useMutation } from "@apollo/react-hooks";
+import signup from './../graphql/mutations/add/usuario';
 
 export default (props) => {
     const { handleSubmit, register, errors } = useForm();
-    const onSubmit = (values) => {
+    const [addUserMutation] = useMutation(signup);
+
+    const onSubmit = async(values) => {
         console.log(values);
+        await addUserMutation({
+            variables: {
+                nombre: values.nombre, 
+                apellidoMaterno: values.apellidoM, 
+                apellidoPaterno: values.apellidoP,
+                nombreUsuario: values.username,
+                correo: values.correo,
+                contrasena: values.password
+            },
+            optimisticResponse: true,
+          }).then((response)=>{
+            console.log(response);
+          })
     }
     return (
         <Fragment>
@@ -23,11 +40,24 @@ export default (props) => {
                                     <i className="user icon"></i>
                                     <input ref={register({
                                         required: true,
-                                    })} type="text" name="nombre" placeholder="Correo electrónico" />
+                                    })} type="text" name="nombre" placeholder="nombre" />
                                 </div>
                             </div>
                             {
                                 errors.nombre && errors.nombre.type === "required" &&
+                                <h4 className="ui red header">Llene este campo</h4>
+                            }
+                            <div className="field">
+                                <label className="label" htmlFor="email">Correo electrónico </label>
+                                <div className="ui left icon input">
+                                    <i className="user icon"></i>
+                                    <input ref={register({
+                                        required: true,
+                                    })} type="text" name="correo" placeholder="Correo" />
+                                </div>
+                            </div>
+                            {
+                                errors.correo && errors.correo.type === "required" &&
                                 <h4 className="ui red header">Llene este campo</h4>
                             }
                             <div className="ui grid">

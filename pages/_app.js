@@ -1,5 +1,6 @@
 import React from 'react';
 import { ApolloProvider } from '@apollo/client';
+import { ApolloProvider as ApolloHooksProvider } from '@apollo/react-hooks'
 import App from 'next/app';
 
 import './index.css';
@@ -12,14 +13,14 @@ import fetch from 'node-fetch';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 
 const link = createHttpLink({
-    uri: "http://localhost:4000/gql",
-    fetch
+  uri: "http://localhost:4000/gql",
+  fetch
 });
 
 const client = new ApolloClient({
-    link,
-    cache: new InMemoryCache(),
-    dataIdFromObject: o => o.id
+  link,
+  cache: new InMemoryCache(),
+  dataIdFromObject: o => o.id
 });
 
 
@@ -31,7 +32,9 @@ class MyApp extends App {
         <Header />
         <div>
           <ApolloProvider client={client}>
-            <Component {...pageProps} />
+            <ApolloHooksProvider client={client}>
+              <Component {...pageProps} />
+            </ApolloHooksProvider>
           </ApolloProvider>
         </div>
         <Footer />
